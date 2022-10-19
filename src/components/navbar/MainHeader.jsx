@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 
+// componentes
+import NavLinkHeader from './NavLinkHeader'
+
 // imagenes
 import logoSneakers from "@/assets/images/logo.svg"
 import imgAvatar from "@/assets/images/image-avatar.png"
@@ -21,7 +24,8 @@ const MainHeader = () => {
     }
 
   return (
-    <header className='container flex items-center mx-auto gap-8 px-4 bg-gray-200 py-8'>
+    <>
+    <header className='container flex items-center mx-auto gap-8 p-4 md:py-0'>
 
         <button className='md:hidden' onClick={handleOpenMenu}>
             <MenuIcon />
@@ -31,15 +35,15 @@ const MainHeader = () => {
 
             <nav className={NavClas}>
 
-                <button className='mb-12 mt-4 ml-4 md:hidden' onClick={handleCloseMenu}>
+                <button className='mb-12 md:hidden' onClick={handleCloseMenu}>
                     <CloseIcon />
                 </button>
 
-                <a href="#">Collections</a>
-                <a href="#">Men</a>
-                <a href="#">Women</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <NavLinkHeader text="Collections"/>
+                <NavLinkHeader text="Men"/>
+                <NavLinkHeader text="Women"/>
+                <NavLinkHeader text="About"/>
+                <NavLinkHeader text="Contact"/>
             </nav>
         <div className='flex gap-4'>
             <button>
@@ -48,6 +52,8 @@ const MainHeader = () => {
             <img src={imgAvatar} alt="/" className='w-10' />
         </div>
     </header>
+    <span className='hidden container mx-auto h-[3px] w-full bg-gray-600 md:block'></span>
+    </>
   )
 }
 
