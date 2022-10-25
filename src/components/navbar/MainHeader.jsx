@@ -14,10 +14,10 @@ import CloseIcon from '@/components/icons/CloseIcon'
 
 const MainHeader = () => {
 
-    const [NavClas, setNavClass] = useState('hidden font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:p-0')
+    const [NavClass, setNavClass] = useState('hidden font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:p-0')
 
     const handleOpenMenu = () => {
-        setNavClass('absolute top-0 left-0 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:p-0')
+        setNavClass('absolute top-0 left-0 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:p-0 z-10')
     }
     const handleCloseMenu = () =>{
         setNavClass('hidden font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:p-0')
@@ -31,9 +31,13 @@ const MainHeader = () => {
             <MenuIcon />
         </button>
 
-        <img src={logoSneakers} alt="Logo sneakers" className='mr-auto mb-1 h-5 md:mr-0' />
+        <img
+          src={logoSneakers}
+          alt="Logo sneakers"
+          className='mr-auto mb-1 h-5 md:mr-0' 
+        />
 
-            <nav className={NavClas}>
+            <nav className={NavClass}>
 
                 <button className='mb-12 md:hidden' onClick={handleCloseMenu}>
                     <CloseIcon />
