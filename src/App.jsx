@@ -1,14 +1,14 @@
 import React from 'react'
 
 // components
-import MainHeader from '@/components/navbar/MainHeader'
-import MainProducts from '@/components/products/MainProducts'
+import IndexHeader from '@/components/navbar/IndexHeader'
+import IndexProducts from '@/components/products/IndexProducts'
 
 const App = () => {
   return (
     <>
-      <MainHeader />
-      <MainProducts />
+      <IndexHeader />
+      <IndexProducts />
     </>
   )
 }
