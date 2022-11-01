@@ -36,7 +36,7 @@ export default ({ARRAY_IMGS = [], ARRAY_IMG_SMALL = [],isOpenModal = false,handl
                 <img
                   src={ARRAY_IMGS[index]}
                   alt=""
-                  className='aspect-[16/13] w-full md:aspect-[16/12] md:cursor-pointer md:rounded-md xl:aspect-[12/7] 2xl:max-h-[500px]'
+                  className='object-cover aspect-[16/16] w-full md:aspect-[16/16] md:cursor-pointer md:rounded-md xl:aspect-[16/13] 2xl:max-h-[500px]'
                   onClick={handleOpenModal}
                 />
 
